@@ -5,7 +5,6 @@ import service from "../services";
 
 export default function AppPagination({ setCryptoList }) {
   const [page, setPage] = useState(5);
-  const [items, setItems] = useState([]);
   const [pageSize, setPageSize] = useState(10);
   const [pagination, setPagination] = useState({
     count: 0,
@@ -18,7 +17,7 @@ export default function AppPagination({ setCryptoList }) {
       .getData({ from: pagination.from, to: pagination.to })
       .then((response) => {
         setPagination({ ...pagination, count: response.count });
-        setItems(response.data.map((item) => setCryptoList(response.data)));
+        response.data.map((item) => setCryptoList(response.data));
       });
   }, [pagination.from, pagination.to]);
 

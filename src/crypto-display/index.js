@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import CryptoItem from "../item";
 
 export default function CryptoDisplay({ cryptoList }) {

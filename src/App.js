@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CryptoDisplay from "./crypto-display";
 import AppPagination from "./paginaton";
 
